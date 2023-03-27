@@ -1,17 +1,17 @@
-function rnti_decoder(varagin)
-clear;
-close all;
+function rnti_decoder(varargin)
+% clear;
+% close all;
 
 %% Param input check
 if (nargin==0)
-    filename='~/Downloads/lte_test_R2_2frame.dat';
+    filename='../lte_test_R2_2frame.dat';
     sample_rate = 15.36e6;
 elseif (nargin==1)
-    filename=varagin{1};
+    filename=varargin{1};
     sample_rate = 15.36e6;
 elseif (nargin==2)
-    filename = varagin{1};
-    sample_rate = str2double(varagin{2});
+    filename = varargin{1};
+    sample_rate = str2double(varargin{2});
 else
     fprintf('\nOnly need filename and sample_rate');
     return;
